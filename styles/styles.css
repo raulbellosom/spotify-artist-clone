@@ -152,6 +152,14 @@ i {
 .library ul li a {
   color: #b3b3b3;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.library ul li a:hover {
+  color: white;
+  background-color: #282828;
 }
 
 .library ul li a img {
