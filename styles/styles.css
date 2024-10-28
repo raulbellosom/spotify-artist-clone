@@ -1,0 +1,675 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 300px 1fr 350px;
+  grid-template-rows: auto 100px;
+  gap: 10px;
+  height: 100vh;
+  background-color: #000;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+i img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+i {
+  cursor: pointer;
+}
+
+.sidebar {
+  grid-column: 1 / 2;
+  background-color: #000;
+  padding-top: 10px;
+  height: 100vh;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  background-color: #121212;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.sidebar nav ul li:hover {
+  background-color: #282828;
+  border-radius: 10px;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.library {
+  background-color: #181818;
+  height: calc(100vh - 172px);
+  overflow-y: hidden;
+}
+
+.library-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.library-header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.library-filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  gap: 10px;
+}
+
+.library-filters div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.library-filters div:first-child i {
+  cursor: pointer;
+  background-color: #282828;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.library-filters div:first-child p {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 40px;
+}
+
+.library-filters div:first-child i:hover {
+  background-color: #313f51;
+}
+
+.library-filters div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.library-filters div:last-child p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-library-artist {
+  margin-top: 20px;
+  overflow-y: auto;
+  height: 62vh;
+}
+
+.library ul {
+  list-style: none;
+}
+
+.library ul li {
+  margin-bottom: 10px;
+}
+
+.library ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.library ul li a img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+main {
+  grid-column: 2 / 3;
+  overflow-y: auto;
+  position: relative;
+  background-image: url("../resources/img/selected-artist/EDEN.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: fit-content;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.artist-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  min-height: 200%;
+}
+
+.artist-container .menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 38vh;
+}
+
+.artist-container .menu-header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.artist-container .menu-header div i {
+  cursor: pointer;
+  background-color: #282828;
+  opacity: 0.6;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.artist-container .menu-header div i:hover {
+  background-color: #313f51;
+}
+
+.artist-container .menu-header .download-icon {
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.artist-info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.artist-details {
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.artist-details .artist-verified {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.artist-details .artist-verified img {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 10px;
+}
+
+.artist-details .artist-verified p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.artist-details h1 {
+  font-size: 6.5rem;
+}
+
+.artist-details p {
+  margin: 10px 0;
+}
+
+.popular-songs {
+  background: linear-gradient(180deg, #3b4c63 0.1%, #2f3c4d 5%, #121212 30%);
+  height: 100%;
+  padding: 20px;
+}
+
+.popular-songs-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 20px;
+  padding: 5px 20px;
+  background-color: rgba(40, 60, 85, 0);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
+}
+
+.popular-songs-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(40, 60, 85, 0.9);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.popular-songs-header.sticky::before {
+  opacity: 1;
+}
+
+.popular-songs-header i {
+  cursor: pointer;
+  background-color: #1ed760;
+  border-radius: 50%;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.popular-songs-header i:hover {
+  background-color: #1ed760;
+  opacity: 0.5;
+}
+
+.popular-songs-header img {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.popular-songs-header i:last-child {
+  background-color: transparent;
+}
+
+.popular-songs-header button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 5px 15px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popular-songs-header button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.popular-songs h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.popular-songs ul {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.popular-songs ul li {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 1rem;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.popular-songs ul li:hover {
+  background-color: #282828;
+  border-radius: 10px;
+}
+
+.popular-songs ul li img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+}
+
+.popular-songs ul li span {
+  font-size: 1rem;
+}
+
+.song-title:first-of-type {
+  color: #1ed760;
+}
+.song-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.song-number {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.song-info .song-number img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.song-title {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.song-title img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+}
+
+.song-plays,
+.song-duration {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.view-more {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 50px;
+}
+
+.view-more:hover {
+  cursor: pointer;
+  background-color: #282828;
+}
+
+.popular-songs .song-duration i img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.discography {
+  padding: 20px;
+}
+
+.albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.popular-songs .albums li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.albums li i img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.right-sidebar {
+  grid-column: 3 / 4;
+  padding: 20px;
+  background-color: #181818;
+}
+
+.right-sidebar section {
+  margin-bottom: 20px;
+}
+
+.right-sidebar img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.current-song {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.current-song .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-song .header p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.current-song i img {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 10px;
+}
+
+.current-song img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.current-song-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.current-song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.current-song-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.current-song-icons i img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.artist-info-detail {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.info-artist {
+  background-image: url("../resources/img/selected-artist/EDEN_2.jpg");
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  min-height: 15vh;
+  padding: 20px 10px;
+}
+.artist-bio {
+  padding: 20px 10px;
+  background-color: #282828;
+}
+
+.artist-bio h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.artist-bio div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.artist-bio div button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 5px 15px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.artist-bio p {
+  font-size: 0.8rem;
+}
+
+footer {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .song-info {
+  display: flex;
+  align-items: center;
+}
+
+footer .song-info img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+footer .player-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 50%;
+  align-items: center;
+  gap: 10px;
+}
+
+footer .player-controls div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+footer .player-controls div i {
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+}
+
+.player-pause-icon {
+  padding: 10px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-next-icon {
+  transform: rotate(180deg);
+  margin-bottom: 6px;
+}
+
+footer .player-controls div i img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+footer .progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #282828;
+  border-radius: 10px;
+  position: relative;
+}
+
+footer .progress-bar progress {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  height: 100%;
+  background-color: #1ed760;
+  border-radius: 10px;
+}
+
+footer progress::-webkit-progress-bar {
+  background-color: #fff;
+}
+
+footer .player-volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer .player-volume i img {
+  width: 1rem;
+  height: 1rem;
+}

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
+      integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>SPOTIFY</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <!-- Sidebar de navegación -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li>
+            <i> <img src="./resources/icons/home.svg" alt="icon-home" /></i>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <i>
+              <img src="./resources/icons/search.svg" alt="icon-search" />
+            </i>
+            <a href="#">Buscar</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="library">
+        <section class="library-header">
+          <div>
+            <i>
+              <img src="./resources/icons/library.svg" alt="icon-library" />
+            </i>
+            <h2>Tu biblioteca</h2>
+          </div>
+          <div>
+            <i>
+              <img src="./resources/icons/plus.svg" alt="icon-plus" />
+            </i>
+            <i>
+              <img
+                src="./resources/icons/arrow-right.svg"
+                alt="icon-arrow-right"
+              />
+            </i>
+          </div>
+        </section>
+        <section class="library-filters">
+          <div>
+            <i>
+              <img src="./resources/icons/close.svg" alt="icon-close" />
+            </i>
+            <p>Artistas</p>
+          </div>
+          <div>
+            <i>
+              <img src="./resources/icons/search.svg" alt="icon-search" />
+            </i>
+            <p>
+              Orden alfabético
+              <i>
+                <img src="./resources/icons/list.svg" alt="icon-list" />
+              </i>
+            </p>
+          </div>
+        </section>
+        <ul class="list-library-artist">
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/billie-eilish.webp"
+                alt="Billie Eilish"
+              />
+              Billie Eilish</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/coldplay.webp"
+                alt="Coldplay"
+              />
+              Coldplay</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img src="./resources/img/artist-profile/eden.webp" alt="Eden" />
+              Eden</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/edmaverik.webp"
+                alt="Ed Maverik"
+              />
+              Ed Maverik</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/humbe.webp"
+                alt="Humbe"
+              />
+              Humbe</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/imagine-dragons.webp"
+                alt="Imagine Dragons"
+              />
+              Imagine Dragons</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/kevin-kaarl.webp"
+                alt="Kevin Kaarl"
+              />
+              Kevin Kaarl</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/lady-gaga.webp"
+                alt="Lady Gaga"
+              />
+              Lady Gaga</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/leo-rizzi.webp"
+                alt="Leo Rizzi"
+              />
+              Leo Rizzi</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/linkin-park.webp"
+                alt="Linkin Park"
+              />
+              Linkin Park</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/one-direction.webp"
+                alt="One Direction"
+              />
+              One Direction</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/porta.webp"
+                alt="Porta"
+              />
+              Porta</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/the-chainsmokers.webp"
+                alt="The Chainsmokers"
+              />
+              The Chainsmokers</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/the-neighbourhood.webp"
+                alt="The Neighbourhood"
+              />
+              The Neighbourhood</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./resources/img/artist-profile/top.webp"
+                alt="Twenty One Pilots"
+              />
+              Twenty One Pilots</a
+            >
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main>
+      <section class="artist-container">
+        <!-- Información del artista -->
+        <article class="menu-header">
+          <div class="menu-navigation">
+            <i>
+              <img
+                src="./resources/icons/chevron-left.svg"
+                alt="icon-chevron-left"
+              />
+            </i>
+            <i>
+              <img
+                src="./resources/icons/chevron-right.svg"
+                alt="icon-chevron-right"
+              />
+            </i>
+          </div>
+          <div>
+            <i class="download-icon">
+              <img
+                src="./resources/icons/circle-arrow-down.svg"
+                alt="icon-download"
+              />
+              <span>Instalar apps</span>
+            </i>
+            <i>
+              <img src="./resources/icons/bell.svg" alt="icon-bell" />
+            </i>
+            <i>
+              <img src="./resources/icons/user.svg" alt="icon-user" />
+            </i>
+          </div>
+        </article>
+        <article class="artist-info">
+          <div class="artist-details">
+            <div class="artist-verified">
+              <img src="./resources/icons/verify.svg" alt="icon-verify" />
+              <p>Artista verificado</p>
+            </div>
+            <h1>EDEN</h1>
+            <p>1,429,929 oyentes mensuales</p>
+          </div>
+        </article>
+
+        <!-- Canciones populares -->
+        <article class="popular-songs">
+          <div class="popular-songs-header">
+            <i>
+              <img src="./resources/icons/pause.svg" alt="icon-music" />
+            </i>
+            <button>Siguiendo</button>
+            <i>
+              <img
+                src="./resources/icons/dots-horizontal.svg"
+                alt="icon-music"
+              />
+            </i>
+          </div>
+          <h2>Populares</h2>
+          <ul>
+            <li>
+              <div class="song-info">
+                <i class="song-number">
+                  <img src="./resources/icons/chart.svg" alt="icon-play" />
+                </i>
+                <span class="song-title">
+                  <i>
+                    <img
+                      src="./resources/img/selected-artist/album-cover-2.jpg"
+                      alt="album-cover"
+                    />
+                  </i>
+                  XO
+                </span>
+              </div>
+              <span class="song-plays">219,501,832</span>
+              <span class="song-duration">2:39</span>
+            </li>
+            <li>
+              <div class="song-info">
+                <span class="song-number">2</span>
+                <span class="song-title">
+                  <i>
+                    <img
+                      src="./resources/img/selected-artist/album-cover-2.jpg"
+                      alt="album-cover"
+                    />
+                  </i>
+                  Sex
+                </span>
+              </div>
+              <span class="song-plays">212,799,387</span>
+              <span class="song-duration">3:38</span>
+            </li>
+            <li>
+              <div class="song-info">
+                <span class="song-number">3</span>
+                <span class="song-title">
+                  <i>
+                    <img
+                      src="./resources/img/selected-artist/album-cover-1.jpg"
+                      alt="album-cover"
+                    />
+                  </i>
+                  Zzz
+                </span>
+              </div>
+              <span class="song-plays">3,887,349</span>
+              <span class="song-duration">3:00</span>
+            </li>
+            <li>
+              <div class="song-info">
+                <span class="song-number">4</span>
+                <span class="song-title">
+                  <i>
+                    <img
+                      src="./resources/img/selected-artist/album-cover-3.jpg"
+                      alt="album-cover"
+                    />
+                  </i>
+                  drugs
+                </span>
+              </div>
+              <span class="song-plays">133,101,112</span>
+              <span class="song-duration">
+                <i>
+                  <img
+                    src="./resources/icons/heart-filled.svg"
+                    alt="icon-heart"
+                  />
+                </i>
+                3:00
+              </span>
+            </li>
+            <li>
+              <div class="song-info">
+                <span class="song-number">5</span>
+                <span class="song-title">
+                  <i>
+                    <img
+                      src="./resources/img/selected-artist/album-cover-4.jpg"
+                      alt="album-cover"
+                    />
+                  </i>
+                  crash
+                </span>
+              </div>
+              <span class="song-plays">116,295,580</span>
+              <span class="song-duration">3:00</span>
+            </li>
+          </ul>
+          <p class="view-more">Ver más</p>
+          <div class="discography">
+            <h2>Discografía</h2>
+            <ul class="albums">
+              <li>
+                <i>
+                  <img
+                    src="./resources/img/selected-artist/album-cover-3.jpg"
+                    alt="album-cover"
+                  />
+                </i>
+                <h3>Friday Night Song</h3>
+                <p>2016</p>
+              </li>
+              <li>
+                <i>
+                  <img
+                    src="./resources/img/selected-artist/album-cover-2.jpg"
+                    alt="album-cover"
+                  />
+                </i>
+                <h3>i think you think too much of me</h3>
+                <p>2016</p>
+              </li>
+              <li>
+                <i>
+                  <img
+                    src="./resources/img/selected-artist/album-cover-1.jpg"
+                    alt="album-cover"
+                  />
+                </i>
+                <h3>vertigo</h3>
+                <p>2018</p>
+              </li>
+              <li>
+                <i>
+                  <img
+                    src="./resources/img/selected-artist/album-cover-4.jpg"
+                    alt="album-cover"
+                  />
+                </i>
+                <h3>end credits</h3>
+                <p>2020</p>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Sidebar derecha (Detalles de la canción) -->
+    <aside class="right-sidebar">
+      <section class="current-song">
+        <div class="header">
+          <p>EDEN</p>
+          <i>
+            <img src="./resources/icons/close.svg" alt="icon-close" />
+          </i>
+        </div>
+        <img
+          src="./resources/img/selected-artist/album-cover-2.jpg"
+          alt="XO album cover"
+        />
+        <div class="current-song-content">
+          <div class="current-song-info">
+            <h3>XO</h3>
+            <p>EDEN</p>
+          </div>
+          <div class="current-song-icons">
+            <i><img src="./resources/icons/heart.svg" alt="icon-heart" /></i>
+            <i
+              ><img src="./resources/icons/dots-horizontal.svg" alt="icon-dots"
+            /></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="artist-info-detail">
+        <div class="info-artist">
+          <p>Información sobre el artista</p>
+        </div>
+        <div class="artist-bio">
+          <h3>EDEN</h3>
+          <div>
+            <p>1,429,929 oyentes mensuales</p>
+            <button>Dejar de seguir</button>
+          </div>
+          <p>
+            EDEN, cuyo nombre real es Jonathan Ng, es un cantante, productor y
+            multiinstrumentista irlandés. Nacido el 23 de diciembre de 1995 en
+            Dublín, Irlanda...
+          </p>
+        </div>
+      </section>
+    </aside>
+
+    <!-- Barra de reproducción -->
+    <footer class="player-bar">
+      <div class="song-info">
+        <img
+          src="./resources/img/selected-artist/album-cover-2.jpg"
+          alt="Album Cover"
+        />
+        <div class="song-details">
+          <p>XO</p>
+          <p>EDEN</p>
+        </div>
+        <i><img src="./resources/icons/heart.svg" alt="icon-heart" /></i>
+      </div>
+      <div class="player-controls">
+        <div>
+          <i
+            ><img src="./resources/icons/arrow-shuffle.svg" alt="icon-shuffle"
+          /></i>
+          <i class="player-next-icon"
+            ><img src="./resources/icons/previous.svg" alt="icon-previous"
+          /></i>
+          <i class="player-pause-icon"
+            ><img src="./resources/icons/pause.svg" alt="icon-play"
+          /></i>
+          <i><img src="./resources/icons/previous.svg" alt="icon-next" /></i>
+          <i><img src="./resources/icons/loop.svg" alt="icon-repeat" /></i>
+        </div>
+        <div class="progress-bar">
+          <span>0:40</span>
+          <progress value="0" max="100"></progress>
+          <span>3:00</span>
+        </div>
+      </div>
+      <div class="player-volume">
+        <i><img src="./resources/icons/square-play.svg" alt="icon-play" /></i>
+        <i>
+          <img src="./resources/icons/microphone.svg" alt="icon-microphone" />
+        </i>
+        <i><img src="./resources/icons/queue.svg" alt="icon-queue" /></i>
+        <i><img src="./resources/icons/speaker.svg" alt="icon-volume" /></i>
+        <i>
+          <img
+            src="./resources/icons/speaker-right.svg"
+            alt="icon-volume-high"
+          />
+        </i>
+        <progress value="0" max="100"></progress>
+        <i
+          ><img
+            src="./resources/icons/picture-in-picture.svg"
+            alt="icon-picture-in-picture"
+        /></i>
+        <i
+          ><img
+            src="./resources/icons/arrow-diagonla.svg"
+            alt="icon-fullscreen"
+        /></i>
+      </div>
+    </footer>
+  </body>
+</html>
