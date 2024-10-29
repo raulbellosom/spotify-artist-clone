@@ -1,0 +1,67 @@
+// _layout.scss
+.sidebar {
+  grid-column: 1 / 2;
+  background-color: $background-color;
+  padding-top: 10px;
+  height: 100vh;
+
+  nav {
+    ul {
+      list-style: none;
+      background-color: $sidebar-bg;
+      padding: 10px;
+      margin-bottom: 10px;
+
+      li {
+        display: flex;
+        gap: 15px;
+        padding: 10px 20px;
+        @include transition(all, 0.3s, ease);
+
+        &:hover {
+          background-color: $sidebar-hover-bg;
+          border-radius: 10px;
+        }
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.library {
+  background-color: $library-bg;
+  height: calc(100vh - 172px);
+  overflow-y: hidden;
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: #b3b3b3;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 5px 20px;
+
+        &:hover {
+          color: $text-color;
+          background-color: $sidebar-hover-bg;
+        }
+
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+          margin-right: 10px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
